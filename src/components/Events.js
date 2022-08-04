@@ -1,5 +1,6 @@
 import React, { useEffect, useState }  from "react";
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 import Event from "./Event";
 import Banner from "./Banner";
 
@@ -50,7 +51,10 @@ const Events = () => {
         {Object.keys(eventsFiltered).map((event) => {
           const singleEvent = eventsFiltered[event];
           return (
-          <Event {...singleEvent} />)
+          <Link to={singleEvent.id} key={singleEvent.id}>
+            <Event {...singleEvent} />
+          </Link>
+          )
         })
         }
       </div>

@@ -8,6 +8,7 @@ import React, { useEffect } from 'react';
 import './App.css';
 import { getEvents } from './redux/events';
 import Events from './components/Events';
+import EventDetails from './components/EventDetails';
 
 function App() {
   const dispatch = useDispatch();
@@ -20,6 +21,7 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<Events />} />
+          <Route path="/:id" element={<EventDetails />} />
         </Routes>
       </main>
     </Router>

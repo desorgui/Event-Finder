@@ -1,13 +1,12 @@
 body {
   background-color: #f8f8f8;
+  width: 100%;
+  overflow-x: hidden;
 }
 .events_container {
   display: grid;
   grid-template-columns: 1fr;
   margin: 0 auto;
-}
-
-.App {
 }
 
 .event-image {
@@ -102,7 +101,7 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
+.details-Banner::before,
 .banner::before {
   content: '';
     display: block;
@@ -114,6 +113,102 @@ body {
     height: 100%;
     z-index: 1;
     opacity: 0.65;
+}
+
+a {
+  text-decoration: none;
+  color: #121219;
+}
+
+.details-Banner {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  background-color: cadetblue;
+  color: #fff;
+  margin-bottom: 8vh;
+  padding-left: 12%;
+  background-image: url(images/event2.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: left center;
+}
+
+.details-Banner h1 {
+  z-index: 2;
+  word-break: break-word;
+}
+
+.details-title {
+  position: absolute;
+  top: 10vh;
+  z-index: 2;
+}
+
+.singleEvent-details {
+  width: 100%;
+}
+
+.details-content {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  gap:1rem;
+}
+
+.left-side {
+  width: 66%;
+}
+
+.left-side img {
+  width: 100%;
+  height: auto;
+}
+
+.right-side {
+  flex-grow: 1;
+  background-color: #fff;
+}
+
+.right-side h3 {
+  width: 91%;
+  padding:25px 15px;
+  border-bottom: solid 1px #c0c0c0;
+}
+
+.right-side .event-info {
+  width: 90%;
+  padding: 0 15px;
+}
+
+.event-info-detail {
+  display: flex;
+  padding: 15px 0;
+  border-bottom: solid 1px #c0c0c0;
+}
+
+.detail-icon {
+  font-size: 2em;
+  margin-right: 1rem;
+  color: rgb(111, 216, 235);
+}
+
+h5,
+h3,
+h2 {
+  margin: 0;
+}
+
+.home-link {
+  position: absolute;
+  left: 5%;
+  top: 2vh;
+  z-index: 2;
+  color: #fff;
+}
+
+.home-link a {
+  color: #fff;
 }
 
 @media screen and (min-width: 768px) { 
