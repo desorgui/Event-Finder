@@ -4,7 +4,7 @@ import eventSlice from './events';
 
 const reducer = combineReducers(
   {
-    events: eventSlice
+    events: eventSlice,
   },
 );
 const store = configureStore({ reducer });

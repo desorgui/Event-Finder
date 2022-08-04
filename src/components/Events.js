@@ -1,11 +1,11 @@
-import React, { useEffect, useState }  from "react";
-import { useSelector } from "react-redux";
-import { Link } from "react-router-dom";
-import Event from "./Event";
-import Banner from "./Banner";
+import React, { useEffect, useState } from 'react';
+import { useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
+import Event from './Event';
+import Banner from './Banner';
 
-const Events = () => {
-    const events = useSelector((state) => state.events);
+function Events() {
+  const events = useSelector((state) => state.events);
 
   const [eventsFiltered, setEventsFiltered] = useState({});
   const [eventClassification, setGameClassification] = useState({});
@@ -43,23 +43,21 @@ const Events = () => {
     classificationSelector();
   }, [events]);
 
-
-    return (
-      <>     
-      <Banner props={eventClassification} filterEvents={filterEvents} />
+  return (
+    <>
+      <Banner prop={eventClassification} filterEvents={filterEvents} />
       <div className="events_container">
         {Object.keys(eventsFiltered).map((event) => {
           const singleEvent = eventsFiltered[event];
           return (
-          <Link to={singleEvent.id} key={singleEvent.id}>
-            <Event {...singleEvent} />
-          </Link>
-          )
-        })
-        }
+            <Link to={singleEvent.id} key={singleEvent.id}>
+              <Event {...singleEvent} /> {/* eslint-disable-line*/}
+            </Link>
+          );
+        })}
       </div>
-      </>
-    );
-  };
-  export default Events;
-  
+    </>
+  );
+}
+
+export default Events;

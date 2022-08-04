@@ -3,6 +3,13 @@ body {
   width: 100%;
   overflow-x: hidden;
 }
+
+h5,
+h3,
+h2 {
+  margin: 0;
+}
+
 .events_container {
   display: grid;
   grid-template-columns: 1fr;
@@ -95,24 +102,24 @@ body {
 
 .filter {
   position: absolute;
-  top: 0;
   z-index: 2;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
 .details-Banner::before,
 .banner::before {
   content: '';
-    display: block;
-    background: #121219;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    opacity: 0.65;
+  display: block;
+  background: #121219;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0.65;
 }
 
 a {
@@ -153,7 +160,7 @@ a {
   width: 80%;
   margin: 0 auto;
   display: flex;
-  gap:1rem;
+  gap: 1rem;
 }
 
 .left-side {
@@ -172,7 +179,7 @@ a {
 
 .right-side h3 {
   width: 91%;
-  padding:25px 15px;
+  padding: 25px 15px;
   border-bottom: solid 1px #c0c0c0;
 }
 
@@ -193,12 +200,6 @@ a {
   color: rgb(111, 216, 235);
 }
 
-h5,
-h3,
-h2 {
-  margin: 0;
-}
-
 .home-link {
   position: absolute;
   left: 5%;
@@ -211,7 +212,7 @@ h2 {
   color: #fff;
 }
 
-@media screen and (min-width: 768px) { 
+@media screen and (min-width: 768px) {
   .events_container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;

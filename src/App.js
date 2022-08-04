@@ -18,13 +18,13 @@ function App() {
   return (
     <div className="App">
       <Router>
-      <main>
-        <Routes>
-          <Route path="/" element={<Events />} />
-          <Route path="/:id" element={<EventDetails />} />
-        </Routes>
-      </main>
-    </Router>
+        <main>
+          <Routes>
+            <Route path="/" element={<Events />} />
+            <Route path="/:id" element={<EventDetails />} />
+          </Routes>
+        </main>
+      </Router>
     </div>
   );
 }
