@@ -1,21 +1,13 @@
 import React from "react";
-import { useSelector } from "react-redux";
 
-const Filter = () => {
-    const newArray = [];
-    let unique = []
-    const events = useSelector((state) => state.events);
-    events.map((event) => {
-        newArray.push(event.classification);
-        unique = [... new Set(newArray)]
-    })
+const Filter = (props) => {
+
     return (
-      <div className="events_container">
-        {unique.map((item) => {
-                return (
-                    <button className="filterBtn" key={item}>{item}</button>
-                  )
-            })}
+      <div className="filter">
+        <button className="filterBtn" value="all" onClick={props.filterEvents}>All</button>
+        {Object.keys(props.filterProp).map((classification) => (            
+            <button className="filterBtn" value={classification} key={classification} onClick={props.filterEvents}>{classification}</button>
+          ))}
       </div>
     );
   };

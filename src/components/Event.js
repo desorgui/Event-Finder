@@ -1,4 +1,6 @@
 import React from "react";
+import { AiOutlineCalendar } from "react-icons/ai";
+import { BsCash } from "react-icons/bs";
 
 const Event = ({id, name, image, classification, localDate, priceRanges}) => {
     return (
@@ -16,11 +18,11 @@ const Event = ({id, name, image, classification, localDate, priceRanges}) => {
 											{classification}
 								</div>
 								<div className="event-date event-start-date">
-									<span>{localDate}</span></div>
+									<span><AiOutlineCalendar /> {localDate}</span></div>
 								</div>
 								<div className="event-details">
 									<div className="event-status">
-										{priceRanges !== "undefined"? <span>${priceRanges[0].min} - ${priceRanges[0].max}</span> :'Free'}
+										{priceRanges !== "undefined"? <span><BsCash /> ${priceRanges[0].min} - ${priceRanges[0].max}</span> : <span><BsCash /> Free</span>}
 									</div>
 								</div>
 							</div>

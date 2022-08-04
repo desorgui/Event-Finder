@@ -8,7 +8,6 @@ import React, { useEffect } from 'react';
 import './App.css';
 import { getEvents } from './redux/events';
 import Events from './components/Events';
-import Filter from './components/Filter';
 
 function App() {
   const dispatch = useDispatch();
@@ -19,7 +18,6 @@ function App() {
     <div className="App">
       <Router>
       <main>
-        <Filter />
         <Routes>
           <Route path="/" element={<Events />} />
         </Routes>
