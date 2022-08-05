@@ -14,7 +14,7 @@ const Filter = (props) => {
 };
 
 Filter.propTypes = {
-  filterProp: PropTypes.string.isRequired,
+  filterProp: PropTypes.object.isRequired, // eslint-disable-line
   filterEvents: PropTypes.func.isRequired,
 };
 

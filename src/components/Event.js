@@ -6,7 +6,7 @@ import { BsCash } from 'react-icons/bs';
 const Event = ({
   id, name, image, classification, localDate, priceRanges,
 }) => (
-  <div className="singleEvent" key={id}>
+  <div className="singleEvent" id={id} key={id}>
     <div className="event-inner">
       <div className="event-event-style-3" data-event-id="143">
         <div className="event-image">

@@ -212,6 +212,10 @@ a {
   color: #fff;
 }
 
+.section-title {
+  margin-left: 7%;
+}
+
 @media screen and (min-width: 768px) {
   .events_container {
     display: grid;

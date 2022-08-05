@@ -46,6 +46,7 @@ function Events() {
   return (
     <>
       <Banner prop={eventClassification} filterEvents={filterEvents} />
+      <h1 className="section-title">List of Events</h1>
       <div className="events_container">
         {Object.keys(eventsFiltered).map((event) => {
           const singleEvent = eventsFiltered[event];

@@ -12,7 +12,7 @@ const Banner = (props) => {
 };
 
 Banner.propTypes = {
-  prop: PropTypes.string.isRequired,
+  prop: PropTypes.object.isRequired, // eslint-disable-line
   filterEvents: PropTypes.func.isRequired,
 };
 
