@@ -1,0 +1,227 @@
+body {
+  background-color: #f8f8f8;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+h5,
+h3,
+h2 {
+  margin: 0;
+}
+
+.events_container {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: 0 auto;
+}
+
+.event-image {
+  width: 100%;
+  height: 200px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.event-image img {
+  width: 100%;
+  height: 100%;
+}
+
+.singleEvent {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.event-event-style-3 {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.event-title {
+  font-size: 1.1em;
+  font-weight: 600;
+  margin-bottom: 0.7rem;
+}
+
+.event-category,
+.filterBtn {
+  padding: 4px 12px;
+  border-radius: 20px;
+  background-color: rgb(111, 216, 235);
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.filterBtn {
+  margin: 0 7.5px;
+  padding: 7px 20px;
+  border: none;
+  outline: none;
+}
+
+.event-content {
+  background-color: #fff;
+  border-top: solid 3px rgb(111, 216, 235);
+  padding: 1rem;
+  z-index: 2;
+  bottom: 0;
+  border-radius: 7px;
+  max-width: 85%;
+  min-width: 85%;
+  margin-top: -30px;
+}
+
+.singleEvent,
+.event-inner {
+  width: 100%;
+}
+
+.event-details {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 0.7rem;
+}
+
+.event-details > div {
+  padding: 5px 10px;
+}
+
+.banner {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  margin-bottom: 7%;
+  background-image: url(images/background.jpg);
+  background-size: 100% auto;
+}
+
+.filter {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.details-Banner::before,
+.banner::before {
+  content: '';
+  display: block;
+  background: #121219;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0.65;
+}
+
+a {
+  text-decoration: none;
+  color: #121219;
+}
+
+.details-Banner {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  background-color: cadetblue;
+  color: #fff;
+  margin-bottom: 8vh;
+  padding-left: 12%;
+  background-image: url(images/event2.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: left center;
+}
+
+.details-Banner h1 {
+  z-index: 2;
+  word-break: break-word;
+}
+
+.details-title {
+  position: absolute;
+  top: 10vh;
+  z-index: 2;
+}
+
+.singleEvent-details {
+  width: 100%;
+}
+
+.details-content {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  gap: 1rem;
+}
+
+.left-side {
+  width: 66%;
+}
+
+.left-side img {
+  width: 100%;
+  height: auto;
+}
+
+.right-side {
+  flex-grow: 1;
+  background-color: #fff;
+}
+
+.right-side h3 {
+  width: 91%;
+  padding: 25px 15px;
+  border-bottom: solid 1px #c0c0c0;
+}
+
+.right-side .event-info {
+  width: 90%;
+  padding: 0 15px;
+}
+
+.event-info-detail {
+  display: flex;
+  padding: 15px 0;
+  border-bottom: solid 1px #c0c0c0;
+}
+
+.detail-icon {
+  font-size: 2em;
+  margin-right: 1rem;
+  color: rgb(111, 216, 235);
+}
+
+.home-link {
+  position: absolute;
+  left: 5%;
+  top: 2vh;
+  z-index: 2;
+  color: #fff;
+}
+
+.home-link a {
+  color: #fff;
+}
+
+.section-title {
+  margin-left: 7%;
+}
+
+@media screen and (min-width: 768px) {
+  .events_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 0 auto;
+    max-width: 1200px;
+    gap: 1rem;
+  }
+}
