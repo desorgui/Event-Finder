@@ -1,6 +1,6 @@
 # Event Finder
 
-> Tge Event Finder application is an appliation where you can find A list of events with details about each event. 
+> The Event Finder application is an appliation where you can find A list of events with details about each event. 
 - Display a list of Event.
 - Filter Events By Category (Music, Sports).
 - See Details about a specific Event.
