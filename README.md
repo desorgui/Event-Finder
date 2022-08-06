@@ -5,6 +5,10 @@
 - Filter Events By Category (Music, Sports).
 - See Details about a specific Event.
 
+## Live Demo
+
+[Deploy Link](https://desorgui-eventfinder.netlify.app/)
+
 ## Built With
 
 - React
@@ -54,14 +58,6 @@ You may also see any lint errors in the console.
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-`npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
 ## Authors
 
 👤 **Guishny Desor**
@@ -77,6 +73,10 @@ Feel free to check the [issues page](../../issues/).
 ## Show your support
 
 Give a ⭐️ if you like this project!
+
+## Acknowledgements
+
+[Nelson Sakwa](https://www.behance.net/sakwadesignstudio) the author of [the original design](https://www.behance.net/gallery/31579789/Ballhead-App-(Free-PSDs))
 
 ## 📝 License
 
