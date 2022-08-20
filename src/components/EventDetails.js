@@ -84,7 +84,9 @@ const EventDetails = () => {
               </span>
               <span>
                 <h5>Event Location</h5>
-                {event.venue[0].state.name}, {event.venue[0].city.name}
+                {event.venue[0].state.name}
+                ,
+                {event.venue[0].city.name}
               </span>
             </span>
             <span className="event-info-detail">

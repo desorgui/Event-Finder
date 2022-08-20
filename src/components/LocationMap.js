@@ -24,6 +24,6 @@ const LocationMap = ({ latitude, longitude }) => { //eslint-disable-line
       </GoogleMap>
     </LoadScript>
   );
-}
+};
 
 export default React.memo(LocationMap);
