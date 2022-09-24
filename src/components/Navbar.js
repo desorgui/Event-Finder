@@ -28,7 +28,7 @@ const Navbar = () => (
         <g className="parallax">
           <use xlinkHref="#gentle-wave" x="48" y="0" fill="rgba(6, 3, 32, 0.7)" />
           <use xlinkHref="#gentle-wave" x="48" y="3" fill="rgba(6, 3, 32, 0.5)" />
-          <use xlinkHref="#gentle-wave" x="48" y="5" fill="midnightblue" />
+          <use xlinkHref="#gentle-wave" x="48" y="5" fill="rgba(6, 3, 29, 0.4)" />
           <use xlinkHref="#gentle-wave" x="48" y="7" fill="rgb(1, 3, 29)" />
         </g>
       </svg>

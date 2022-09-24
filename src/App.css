@@ -99,6 +99,20 @@ h2 {
   margin-bottom: 0.7rem;
 }
 
+.event-details .event-date span,
+.event-details .event-price span {
+  display: flex;
+  align-items: center;
+}
+
+.event-details .event-date span svg,
+.event-details .event-price span svg {
+  color: rgb(111, 216, 235);
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-right: 10px;
+}
+
 .event-details > div {
   padding: 5px 10px;
 }
@@ -228,7 +242,23 @@ a {
 }
 
 .section-title {
-  margin-left: 7%;
+  text-align: center;
+  margin-bottom: 35px;
+  position: relative;
+  padding: 15px;
+}
+
+h1.section-title::before {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 3px;
+  bottom: 0;
+  background: rgb(111, 216, 235);
+}
+
+.section-title .span {
+  color: rgb(111, 216, 235);
 }
 
 @media screen and (min-width: 768px) {

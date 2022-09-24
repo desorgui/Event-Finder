@@ -9,6 +9,7 @@ import './App.css';
 import { getEvents } from './redux/events';
 import Events from './components/Events';
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 import EventDetails from './components/EventDetails';
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
           </Routes>
         </main>
       </Router>
+      <Footer />
     </div>
   );
 }

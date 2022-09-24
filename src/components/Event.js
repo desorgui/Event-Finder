@@ -29,7 +29,7 @@ const Event = ({
             </div>
           </div>
           <div className="event-details">
-            <div className="event-status">
+            <div className="event-price">
               {priceRanges !== 'undefined' ? (
                 <span>
                   <BsCash />
