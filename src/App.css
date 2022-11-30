@@ -14,6 +14,7 @@ h2 {
   display: grid;
   grid-template-columns: 1fr;
   margin: 0 auto;
+  gap: 1rem;
 }
 
 .event-image {
@@ -123,7 +124,7 @@ h2 {
   height: 400px;
   margin-bottom: 7%;
   background-image: url(images/background.jpg);
-  background-size: 100% auto;
+  background-size: cover;
 }
 
 .filter {
@@ -263,10 +264,13 @@ h1.section-title::before {
 
 @media screen and (min-width: 768px) {
   .events_container {
-    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 991px) {
+  .events_container {
     grid-template-columns: 1fr 1fr 1fr;
-    margin: 0 auto;
     max-width: 1200px;
-    gap: 1rem;
   }
 }

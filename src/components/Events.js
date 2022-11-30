@@ -8,7 +8,7 @@ function Events() {
   const events = useSelector((state) => state.events);
 
   const [eventsFiltered, setEventsFiltered] = useState({});
-  const [eventClassification, setGameClassification] = useState({});
+  const [eventClassification, setEventClassification] = useState({});
 
   let classificationOptions = {};
 
@@ -35,7 +35,7 @@ function Events() {
         classificationOptions[tempData] = true;
       }
     });
-    setGameClassification(classificationOptions);
+    setEventClassification(classificationOptions);
   };
 
   useEffect(() => {
