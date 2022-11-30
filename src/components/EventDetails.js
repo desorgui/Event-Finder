@@ -6,6 +6,7 @@ import { AiOutlineCalendar } from 'react-icons/ai';
 import { BiCategoryAlt } from 'react-icons/bi';
 import { BsCashCoin } from 'react-icons/bs';
 import { FcHome } from 'react-icons/fc';
+import LocationMap from './LocationMap';
 
 const EventDetails = () => {
   const { id } = useParams();
@@ -70,6 +71,35 @@ const EventDetails = () => {
             </span>
             <span className="event-info-detail">
               <span className="detail-icon">
+                <BiCategoryAlt />
+              </span>
+              <span>
+                <h5>Venue</h5>
+                {event.venue[0].name}
+              </span>
+            </span>
+            <span className="event-info-detail">
+              <span className="detail-icon">
+                <BiCategoryAlt />
+              </span>
+              <span>
+                <h5>Event Location</h5>
+                {event.venue[0].state.name}
+                ,
+                {event.venue[0].city.name}
+              </span>
+            </span>
+            <span className="event-info-detail">
+              <span className="detail-icon">
+                <BiCategoryAlt />
+              </span>
+              <span>
+                <h5>Event Address</h5>
+                {event.venue[0].address.line1}
+              </span>
+            </span>
+            <span className="event-info-detail">
+              <span className="detail-icon">
                 <BsCashCoin />
               </span>
               <span>
@@ -90,6 +120,7 @@ const EventDetails = () => {
           </div>
         </div>
       </div>
+      <LocationMap {...event.location} /> {/* eslint-disable-line */}
     </div>
   );
 };

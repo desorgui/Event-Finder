@@ -10,7 +10,7 @@ const Event = ({
     <div className="event-inner">
       <div className="event-event-style-3" data-event-id="143">
         <div className="event-image">
-          <img src={`${image}`} alt={`${name}`} />
+          <img src={`${image}`} alt={`${name}`} className="event-img" />
         </div>
         <div className="event-content">
           <div className="event-title">
@@ -29,7 +29,7 @@ const Event = ({
             </div>
           </div>
           <div className="event-details">
-            <div className="event-status">
+            <div className="event-price">
               {priceRanges !== 'undefined' ? (
                 <span>
                   <BsCash />

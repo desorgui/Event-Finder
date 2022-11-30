@@ -13,7 +13,7 @@ export const getEvents = createAsyncThunk(
         const { events } = res._embedded; // eslint-disable-line
         events.forEach((event) => {
           const {
-            id, name, dates, images, classifications,
+            id, name, dates, images, classifications, _embedded // eslint-disable-line
           } = event;
           let { priceRanges } = event;
           if (!priceRanges) {
@@ -27,6 +27,8 @@ export const getEvents = createAsyncThunk(
             image: images[5].url,
             classification: classifications[0].segment.name,
             priceRanges,
+            venue: _embedded.venues,
+            location: _embedded.venues[0].location,
           });
         });
       });

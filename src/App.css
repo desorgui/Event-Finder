@@ -14,10 +14,12 @@ h2 {
   display: grid;
   grid-template-columns: 1fr;
   margin: 0 auto;
+  gap: 1rem;
 }
 
 .event-image {
   width: 100%;
+  position: relative;
   height: 200px;
   border-radius: 10px;
   overflow: hidden;
@@ -26,6 +28,17 @@ h2 {
 .event-image img {
   width: 100%;
   height: 100%;
+}
+
+.event-image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #1212198e;
+  z-index: 2;
 }
 
 .singleEvent {
@@ -87,6 +100,20 @@ h2 {
   margin-bottom: 0.7rem;
 }
 
+.event-details .event-date span,
+.event-details .event-price span {
+  display: flex;
+  align-items: center;
+}
+
+.event-details .event-date span svg,
+.event-details .event-price span svg {
+  color: rgb(111, 216, 235);
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-right: 10px;
+}
+
 .event-details > div {
   padding: 5px 10px;
 }
@@ -94,10 +121,10 @@ h2 {
 .banner {
   position: relative;
   width: 100%;
-  height: 300px;
+  height: 400px;
   margin-bottom: 7%;
   background-image: url(images/background.jpg);
-  background-size: 100% auto;
+  background-size: cover;
 }
 
 .filter {
@@ -106,6 +133,9 @@ h2 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .details-Banner::before,
@@ -213,15 +243,34 @@ a {
 }
 
 .section-title {
-  margin-left: 7%;
+  text-align: center;
+  margin-bottom: 35px;
+  position: relative;
+  padding: 15px;
+}
+
+h1.section-title::before {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 3px;
+  bottom: 0;
+  background: rgb(111, 216, 235);
+}
+
+.section-title .span {
+  color: rgb(111, 216, 235);
 }
 
 @media screen and (min-width: 768px) {
   .events_container {
-    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 991px) {
+  .events_container {
     grid-template-columns: 1fr 1fr 1fr;
-    margin: 0 auto;
     max-width: 1200px;
-    gap: 1rem;
   }
 }

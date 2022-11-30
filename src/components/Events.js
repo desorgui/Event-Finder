@@ -8,7 +8,7 @@ function Events() {
   const events = useSelector((state) => state.events);
 
   const [eventsFiltered, setEventsFiltered] = useState({});
-  const [eventClassification, setGameClassification] = useState({});
+  const [eventClassification, setEventClassification] = useState({});
 
   let classificationOptions = {};
 
@@ -35,7 +35,7 @@ function Events() {
         classificationOptions[tempData] = true;
       }
     });
-    setGameClassification(classificationOptions);
+    setEventClassification(classificationOptions);
   };
 
   useEffect(() => {
@@ -46,7 +46,10 @@ function Events() {
   return (
     <>
       <Banner prop={eventClassification} filterEvents={filterEvents} />
-      <h1 className="section-title">List of Events</h1>
+      <h1 className="section-title">
+        Upcoming
+        <span className="span"> Events</span>
+      </h1>
       <div className="events_container">
         {Object.keys(eventsFiltered).map((event) => {
           const singleEvent = eventsFiltered[event];
